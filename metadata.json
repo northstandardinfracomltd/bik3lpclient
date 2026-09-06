@@ -1,0 +1,6 @@
+{
+  "name": "Bikelp - Espace Assuré",
+  "description": "Espace client minimaliste et gestion des contrats d'assurance vélo Bikelp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
