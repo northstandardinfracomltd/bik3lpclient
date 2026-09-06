@@ -122,6 +122,22 @@ export const LoginView: React.FC<LoginViewProps> = ({
 
       {/* Main Content Card - Center div */}
       <div className="flex-1 flex flex-col items-center justify-center p-4">
+        <h1
+          id="login-page-title"
+          style={{
+            fontFamily: 'Alternative, Gochi, cursive, sans-serif',
+            fontSize: '30px',
+            fontWeight: 500,
+            letterSpacing: '0px',
+            cursor: 'default',
+            marginBottom: '24px',
+            textAlign: 'center',
+          }}
+          className="text-neutral-950 text-center"
+        >
+          {t.loginTitle}
+        </h1>
+
         <div
           id="login-card"
           style={{
@@ -131,29 +147,18 @@ export const LoginView: React.FC<LoginViewProps> = ({
           }}
           className="w-full max-w-md bg-white p-8 sm:p-10 space-y-6"
         >
-          
-          <div className="text-center">
-            <h1
-              style={{
-                fontFamily: 'Alternative, Gochi, cursive, sans-serif',
-                fontSize: '30px',
-                fontWeight: 500,
-                letterSpacing: '0px',
-                cursor: 'default',
-                marginTop: '5px',
-                marginBottom: '30px',
-                textAlign: 'center',
-              }}
-              className="text-neutral-950"
-            >
-              {t.loginTitle}
-            </h1>
-          </div>
-
           {errorMessage && (
             <div
-              style={{ borderRadius: '20px' }}
-              className="p-3 bg-black text-white text-xs font-bold text-center"
+              id="login-error-message"
+              style={{
+                borderRadius: '20px',
+                background: '#fff',
+                color: '#af1f1f',
+                textAlign: 'left',
+                fontSize: '16px',
+                padding: '0px',
+              }}
+              className="font-medium"
             >
               {errorMessage}
             </div>
@@ -328,9 +333,8 @@ export const LoginView: React.FC<LoginViewProps> = ({
               id="support-email-btn"
               href="mailto:support@bikelp.com"
               style={{
-                boxShadow: 'inset 0 1px 1px #ffffff00, 0 1px 2px #ffffff38, 0 4px 4px #ffffff26, 0 7px 0 -12px #b625ad, inset 0 6px 12px #ffffff45',
                 fontSize: '20px',
-                background: 'linear-gradient(192deg, #b625ad, #891281)',
+                background: '#000',
                 color: '#ffffff',
                 fontWeight: 700,
                 padding: '14px 25px 15px 25px',
@@ -351,9 +355,8 @@ export const LoginView: React.FC<LoginViewProps> = ({
               type="button"
               onClick={() => setIsForgotSidePaneOpen(false)}
               style={{
-                boxShadow: 'inset 0 1px 1px #ffffff00, 0 1px 2px #ffffff38, 0 4px 4px #ffffff26, 0 7px 0 -12px #b625ad, inset 0 6px 12px #ffffff45',
                 fontSize: '20px',
-                background: '#3e1475',
+                background: '#000',
                 color: '#ffffff',
                 fontWeight: 700,
                 padding: '14px 25px 15px 25px',
@@ -379,7 +382,7 @@ export const LoginView: React.FC<LoginViewProps> = ({
               fontWeight: 600,
               lineHeight: '30px',
               color: '#000',
-              marginTop: '-30px',
+              marginTop: '-10px',
             }}
           >
             Pour des raisons de sécurité, la réinitialisation du mot de passe s'effectue auprès de notre support client ou par le lien de récupération envoyé sur votre adresse email.
