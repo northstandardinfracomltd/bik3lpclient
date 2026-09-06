@@ -10,8 +10,8 @@ import { AppsScriptSidePane } from './components/AppsScriptSidePane';
 import { formatRawAccountToUser, DEMO_ACCOUNTS_RAW } from './services/accountService';
 
 export default function App() {
-  // Initialize with active demo account by default
-  const [user, setUser] = useState<UserAccount | null>(() => formatRawAccountToUser(DEMO_ACCOUNTS_RAW[0]));
+  // Not logged in by default -> starts on Login page
+  const [user, setUser] = useState<UserAccount | null>(null);
   const [activeTab, setActiveTab] = useState<ActiveTab>('profile');
   const [lang, setLang] = useState<Language>('fr');
   const [isLiveSheet, setIsLiveSheet] = useState(false);
